@@ -1,10 +1,10 @@
-import { readFile } from 'fs/promises';
+//import { readFile } from 'fs/promises';
 import Head from 'next/head';
 import { getPost } from '../..lib/posts';
-async function getPost(slug) {
-  const data = await readFile(`'content/posts/${slug}.json`, 'utf8');
-  return JSON.parse(data);
-}
+// async function getPost(slug) {
+//   const data = await readFile(`'content/posts/${slug}.json`, 'utf8');
+//   return JSON.parse(data);
+// }
 export async function getStaticProps() {
   console.log('[FirstPostPage] getStaticProps ()');
   const post = await getPost('first-post');
