@@ -22,6 +22,7 @@ function FirstPostPage({ post }) {
         <title>{post.title} - My Blog</title>
       </Head>
       <main>
+        <p>{post.date}</p>
         <h1>{post.title}</h1>
         <article dangerouslySetInnerHTML={{__html: post.body}}/>
       </main>
