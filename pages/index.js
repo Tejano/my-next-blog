@@ -1,13 +1,15 @@
+import Head from 'next/head';
 export default function HomePage() {
-    return (
-      <div>
-        <main>
-          <h1>Beto's Blog</h1>
-        </main>
-      </div>
-    );
+
+  return (
+    <>
+      <Head>
+          <title>My Blog</title>
+          <meta name="description" value="This is my blog"></meta>
+      </Head>
+      <main>
+        <h1>My Blog</h1>
+      </main>
+    </>
+  );
 }
-
-
-
-
