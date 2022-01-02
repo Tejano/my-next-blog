@@ -1,6 +1,6 @@
 //import { readFile } from 'fs/promises';
 import Head from 'next/head';
-import { getPost } from '../..lib/posts';
+import { getPost } from '../../lib/posts';
 // async function getPost(slug) {
 //   const data = await readFile(`'content/posts/${slug}.json`, 'utf8');
 //   return JSON.parse(data);
@@ -23,7 +23,7 @@ function FirstPostPage({ post }) {
       </Head>
       <main>
         <h1>{post.title}</h1>
-        <p>{post.body}</p>
+        <article dangerouslySetInnerHTML={{__html: post.body}}/>
       </main>
     </>
   );
